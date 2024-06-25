@@ -1,0 +1,28 @@
+@model Post
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Post</title>
+</head>
+
+<body>
+    <h1>Add Post</h1>
+
+    <form asp-action="Add" method="post">
+        <div>
+            <label>Title:</label>
+            <input type="text" asp-for="Title" />
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div>
+            <label>Content:</label>
+            <textarea asp-for="Content"></textarea>
+            <span asp-validation-for="Content"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

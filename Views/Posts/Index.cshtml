@@ -1,0 +1,23 @@
+@model List<Post>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Posts</title>
+</head>
+<body>
+    <h1>All Posts</h1>
+    
+    <ul>
+        @foreach (var post in Model)
+        {
+            <li>
+                <h2>@post.Title</h2>
+                <p>@post.Content</p>
+                <p>@post.CreatedAt.ToShortDateString()</p>
+                <!-- Add more details as needed -->
+            </li>
+        }
+    </ul>
+</body>
+</html>
